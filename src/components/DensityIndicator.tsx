@@ -7,9 +7,9 @@ interface DensityIndicatorProps {
 
 export function DensityIndicator({ density }: DensityIndicatorProps) {
   const getColorClass = () => {
-    if (density < 0.3) return 'bg-green-100 text-green-800';
-    if (density < 0.7) return 'bg-yellow-100 text-yellow-800';
-    return 'bg-red-100 text-red-800';
+    if (density < 0.3) return 'bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200';
+    if (density < 0.7) return 'bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200';
+    return 'bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200';
   };
 
   const getMessage = () => {
@@ -19,7 +19,7 @@ export function DensityIndicator({ density }: DensityIndicatorProps) {
   };
 
   return (
-    <div className={`rounded-lg p-6 ${getColorClass()}`}>
+    <div className={`rounded-lg p-6 transition-colors ${getColorClass()}`}>
       <div className="flex items-center space-x-3">
         <Users className="w-8 h-8" />
         <div>

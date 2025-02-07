@@ -8,3 +8,5 @@ export interface SettingsConfig {
   sensitivity: number;
   threshold: number;
 }
+
+export type Theme = 'light' | 'dark';

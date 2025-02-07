@@ -36,17 +36,24 @@ export function VideoUpload({ onVideoFrame }: VideoUploadProps) {
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-lg p-6">
+    <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 transition-colors">
       <div className="flex items-center space-x-2 mb-4">
-        <Upload className="w-6 h-6 text-gray-600" />
-        <h2 className="text-xl font-semibold">Video Upload</h2>
+        <Upload className="w-6 h-6 text-gray-600 dark:text-gray-400" />
+        <h2 className="text-xl font-semibold text-gray-900 dark:text-white">Video Upload</h2>
       </div>
 
       <input
         type="file"
         accept="video/*"
         onChange={handleFileChange}
-        className="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
+        className="block w-full text-sm text-gray-500 dark:text-gray-400
+          file:mr-4 file:py-2 file:px-4 
+          file:rounded-full file:border-0 
+          file:text-sm file:font-semibold
+          file:bg-blue-50 file:text-blue-700 
+          dark:file:bg-blue-900 dark:file:text-blue-200
+          hover:file:bg-blue-100 dark:hover:file:bg-blue-800
+          transition-colors"
       />
 
       <video
